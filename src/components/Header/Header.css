@@ -1,0 +1,16 @@
+:root {
+  --main-color: #42A2F8;
+  --secondary-color: #E34D8E;
+  font-size: 18px;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
+}

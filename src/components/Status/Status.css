@@ -1,0 +1,16 @@
+.status {
+  align-items: center;
+  display: flex;
+}
+.status > *:not(:last-child) {
+  margin-right: 10px;
+}
+.coin{
+  color: #4FDF4C;
+}
+.countGpu{
+  color: #42A2F8;
+}
+.temp{
+  color: #E34D4D;
+}

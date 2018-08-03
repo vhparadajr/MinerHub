@@ -1,0 +1,7 @@
+h1 {
+  font-size: 48px;
+}
+.logo {
+  color: var(--main-color);
+  font-style: italic;
+}

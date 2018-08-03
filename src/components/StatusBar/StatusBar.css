@@ -1,0 +1,34 @@
+.statusBar {
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
+  align-items: center;
+  font-size: 20px;
+  height: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  color: white;
+}
+
+.button1 {
+  width: 162px;
+  height: 55px;
+  background-color: #42A2F8;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+}
+
+.button2 {
+  width: 162px;
+  height: 55px;
+  background-color: black;
+  color: #42A2F8;
+  border-radius: 5px;
+  font-size: 18px;
+  border-color: #42A2F8
+}

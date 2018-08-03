@@ -1,0 +1,25 @@
+.login {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.login > *:not(:last-child) {
+  margin-right: 20px;
+}
+.profile-pic {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+.dropdown-icon {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 13px solid var(--secondary-color);
+  border-bottom: 13px solid transparent;
+  height: 0;
+  margin-top: 12px;
+  width: 0;
+}
