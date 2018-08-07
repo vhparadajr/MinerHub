@@ -14,3 +14,18 @@
 .temp{
   color: #E34D4D;
 }
+
+/********** dropdown **********/
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown--active .dropdown__content {
+    display: block;
+}

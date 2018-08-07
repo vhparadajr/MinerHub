@@ -1,0 +1,9 @@
+.dash-pane{
+  margin-bottom: 1em;
+}
+
+.dash-pane-section{
+  background-color: black;
+  color: white;
+  height: 100%;
+}

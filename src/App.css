@@ -1,6 +1,4 @@
-
-/* **************HEADER*********** */
-
-
-
-/* *********STATUSBAR********** */
+.two-pane-contanier{
+  display: flex;
+  justify-content: space-between;
+}

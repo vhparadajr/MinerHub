@@ -1,5 +1,23 @@
-body {
+:root {
+  --main-color: #42A2F8;
+  --secondary-color: #E34D8E;
+  --white: #fff;
+  --black: #000;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: sans-serif;
+}
+
+.h5{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 0 0 0.5em;
 }
