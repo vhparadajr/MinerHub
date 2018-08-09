@@ -14,7 +14,15 @@
 .temp{
   color: #E34D4D;
 }
-
+.dropdown-icon{
+  margin-right: 35px;
+}
+.countGpu{
+  margin-right: 35px;
+}
+.miner{
+  margin-left: 25px;
+}
 /********** dropdown **********/
 
 /* .dropdown {

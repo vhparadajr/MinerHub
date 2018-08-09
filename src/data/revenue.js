@@ -1,34 +1,34 @@
 export default [
   {
-    "revenuePerDay": "$10.10",
-    "updated": "2016-09-12"
+    "revenuePerDay": "$9.10",
+    "updated": "2018-08-02"
   },
   {
-    "revenuePerDay": "$13.00",
-    "updated": "2016-09-13"
+    "revenuePerDay": "$11.00",
+    "updated": "2018-08-03"
   },
   {
-    "revenuePerDay": "$3.09",
-    "updated": "2016-09-14"
+    "revenuePerDay": "$7.09",
+    "updated": "2018-08-04"
   },
   {
     "revenuePerDay": "$5.50",
-    "updated": "2016-09-15"
+    "updated": "2018-08-05"
   },
   {
-    "revenuePerDay": "$10.09",
-    "updated": "2016-09-16"
+    "revenuePerDay": "$8.09",
+    "updated": "2018-08-06"
   },
   {
-    "revenuePerDay": "$2.56",
-    "updated": "2016-09-17"
+    "revenuePerDay": "$6.56",
+    "updated": "2018-08-07"
   },
   {
-    "revenuePerDay": "$11.09",
-    "updated": "2016-09-18"
+    "revenuePerDay": "$9.09",
+    "updated": "2018-08-08"
   },
   {
     "revenuePerDay": "$5.75",
-    "updated": "2016-09-19"
+    "updated": "2018-08-09"
   }
 ];

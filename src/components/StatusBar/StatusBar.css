@@ -30,3 +30,6 @@
   font-size: 18px;
   border-color: #42A2F8
 }
+header + .dash-pane .hash{
+  display: none;
+}

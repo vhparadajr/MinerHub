@@ -1,9 +1,33 @@
 import React, { Component } from 'react';
 import './RevenueChart.css';
 import * as d3 from 'd3'
+import axios from 'axios'
 
 class Chart extends React.Component {
+
+  state = {
+    revenue: ''
+  }
+
+  async getRevenueData() {
+    const apiURL = 'http://192.168.1.116:17790/api/miners/5'
+    const apiKey = '?key=0d6af9fca12f4c3188c836c79e39403c';
+
+    try {
+      const response = await axios.get(apiURL + apiKey);
+
+        this.setState({revenue:response.data.coinInfo.revenuePerDay})
+
+      // this.setState({  });
+    } catch (error) {
+      console.log('something went wrong', error);
+      this.setState({ error: true });
+    }
+  }
+
+
   componentDidMount(){
+    this.getRevenueData()
     const data = this.props.data;
     var margin = {left:100, right:25, top:40, bottom:45}
     var width = 540 - margin.left - margin.right
@@ -20,7 +44,6 @@ class Chart extends React.Component {
     var parseTime = d3.timeParse("%Y-%m-%d");
 
     data.forEach((d) =>{
-      console.log(parseTime(d.updated));
       d.updated = parseTime(d.updated);
       d.revenuePerDay = parseFloat(d.revenuePerDay.slice(1));
     })
@@ -83,9 +106,9 @@ class Chart extends React.Component {
 
     g.append('line')
       .attr('x1', 0)
-      .attr('y1', 100)
+      .attr('y1', 70)
       .attr('x2', x(d3.max(data, d => d.updated)))
-      .attr('y2', 100)
+      .attr('y2', 70)
       .attr('stroke', '#42A2F8')
       .attr('stroke-width', '3px');
 
@@ -114,16 +137,16 @@ class Chart extends React.Component {
 }
 
   render() {
+    const {revenue} = this.state;
+
     return (
       <div>
-        <section className="legend">
-          <div>
-            <span>Monthly Avg</span>
-            <span>Daily</span>
-          </div>
-          <span>Tpday: {this.props.todayRev}</span>
+        <section className='legend'>
+            <span className='monthly'>Monthly Avg</span>
+            <span className='daily'>Daily</span>
+            <span className='today'>Today: {revenue}</span>
         </section>
-        <div id="chart-area"></div>
+        <div id='chart-area'></div>
       </div>
     );
   }

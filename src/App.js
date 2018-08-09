@@ -20,10 +20,10 @@ class App extends React.Component {
           </DashPane>
           <div className="two-pane-container">
             <DashPane title="Revenue" width={47.5}>
-              <RevenueChart data={d3datum} todayRev="$1.45"/>
+              <RevenueChart data={d3datum}/>
             </DashPane>
             <DashPane title="Miner Status" width={47.5}>
-              <MinerStatus />
+
             </DashPane>
           </div>
         </Container>

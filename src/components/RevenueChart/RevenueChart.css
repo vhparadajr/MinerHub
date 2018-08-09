@@ -1,2 +1,18 @@
 #chart-area{
 }
+.two-pane-container .dash-pane:first-child .hash{
+  display: none;
+}
+.legend{
+  margin-left: 150px;
+  padding-top: 52px;
+}
+.monthly{
+  margin-right: 50px;
+  color: #42A2F8;
+}
+.daily{
+  margin-right: 50px;
+  color: #E34D8E;
+
+}
