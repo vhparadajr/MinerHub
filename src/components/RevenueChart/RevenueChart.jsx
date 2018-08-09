@@ -15,8 +15,7 @@ class Chart extends React.Component {
 
     try {
       const response = await axios.get(apiURL + apiKey);
-
-        this.setState({revenue:response.data.coinInfo.revenuePerDay})
+      this.setState({revenue:response.data.coinInfo.revenuePerDay})
 
       // this.setState({  });
     } catch (error) {
@@ -27,6 +26,7 @@ class Chart extends React.Component {
 
 
   componentDidMount(){
+    this.interv =setInterval(() => this.getRevenueData(), 5000)
     this.getRevenueData()
     const data = this.props.data;
     var margin = {left:100, right:25, top:40, bottom:45}
@@ -134,6 +134,9 @@ class Chart extends React.Component {
       .attr('font-weight', 'lighter');
 
 
+}
+componentWillUnmount(){
+  clearInterval(this.interv)
 }
 
   render() {

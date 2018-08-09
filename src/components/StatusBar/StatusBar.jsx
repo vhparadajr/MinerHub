@@ -29,24 +29,33 @@ class StatusBar extends React.Component {
     } else {
       response = await axios.post(apiURL + apiKey + restartAction);
     }
-
-    console.log(response)
   }
 
-  async componentDidMount() {
+  async fetchData(){
     const apiURL = "http://192.168.1.116:17790/api/summary";
 
     try {
       const response = await axios.get(apiURL + apiKey);
       const gpu = response.data.gpuCount;
       const temp = response.data.coinList[0].temperature;
-
       this.setState({ gpu, temp });
     } catch (error) {
       console.log('something went wrong', error);
       this.setState({ error: true });
     }
   }
+
+
+  componentDidMount() {
+    this.interv =setInterval(() => this.fetchData(), 5000)
+    this.fetchData()
+  }
+  componentWillUnmount(){
+    clearInterval(this.interv)
+  }
+
+
+
 
   render() {
     const offState = (
