@@ -1,4 +1,4 @@
-.two-pane-contanier{
+.two-pane-container{
   display: flex;
   justify-content: space-between;
 }

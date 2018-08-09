@@ -6,6 +6,7 @@ import axios from 'axios'
 const apiKey = "?key=0d6af9fca12f4c3188c836c79e39403c";
 const stopAction = "&action=stop";
 const startAction = "&action=start";
+const restartAction = "&action=restart";
 const id = 5;
 
 class StatusBar extends React.Component {
@@ -23,8 +24,10 @@ class StatusBar extends React.Component {
 
     if (name === 'start') {
       response = await axios.post(apiURL + apiKey + startAction);
-    } else {
+    } else if (name === 'stop') {
       response = await axios.post(apiURL + apiKey + stopAction);
+    } else {
+      response = await axios.post(apiURL + apiKey + restartAction);
     }
 
     console.log(response)
@@ -63,7 +66,7 @@ class StatusBar extends React.Component {
         <div className="status">
           <button className="button1" onClick={this.handleClick} name="start">Start</button>
           <button className="button1" onClick={this.handleClick} name="stop">Stop</button>
-          <button className="button2">Reset</button>
+          <button className="button2" onClick={this.handleClick}>Restart</button>
         </div>
       </div>
     );
