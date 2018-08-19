@@ -27,6 +27,7 @@ https://www.figma.com/file/Mu4OHaeSFB2LYbzOXLqX6ikt/MinerHub?node-id=0%3A1
 - Add current wattage consumption 
 - Ability to change pools/workers
 - Import api calls using methods 
+- Improve responsiveness 
 
 ## Lessons Learned:
 - How to create charts using D3
